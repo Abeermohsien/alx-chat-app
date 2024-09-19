@@ -1,6 +1,6 @@
 const users = [];
 
-// Join user to chat
+// show user jsointing
 function userJoin(id, username, room) {
   const user = { id, username, room };
 
@@ -9,12 +9,12 @@ function userJoin(id, username, room) {
   return user;
 }
 
-// Get current user
+// returning user curr
 function getCurrentUser(id) {
   return users.find(user => user.id === id);
 }
 
-// User leaves chat
+// return user leave chat
 function userLeave(id) {
   const index = users.findIndex(user => user.id === id);
 
@@ -23,7 +23,7 @@ function userLeave(id) {
   }
 }
 
-// Get room users
+// return user room
 function getRoomUsers(room) {
   return users.filter(user => user.room === room);
 }
